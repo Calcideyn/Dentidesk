@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Registro;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,8 +12,11 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
+ 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+*/
+Route::get('/', [Registro::class, 'index'])->name('Inicio');
+Route::post('/Registrar', [Registro::class, 'create'])->name('Registrar');

@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -13,10 +12,10 @@ return new class extends Migration
     {
         Schema::create('EGRESOS', function (Blueprint $table) {
 
-            $table->id('id_egresos');
-            $table->dateTime('fecha_egresos');
-            $table->string('descripcion_egresos');
-            $table->integer('monto_egresos');
+            $table->id('id_egreso');
+            $table->dateTime('fecha_egreso');
+            $table->string('descripcion_egreso');
+            $table->integer('monto_egreso');
             $table->timestamps();
         });
     }
